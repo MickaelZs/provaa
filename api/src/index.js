@@ -10,4 +10,5 @@ server.use(cors());
 server.use(express.json());
 server.use(usuarioController);
 server.use(filmeController);
+server.use ('/storage/capasFilmes', express.static('storage/capasFilmes'));
 server.listen(process.env.PORT, () => console.log (`API ONLINE NA PORTA ${process.env.PORT}`));
